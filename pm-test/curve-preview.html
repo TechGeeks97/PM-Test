@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curve Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #DC2626;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+        }
+        .preview {
+            background: #DC2626;
+            margin: 20px 0;
+            position: relative;
+            height: 200px;
+        }
+        .curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+        }
+        .white-section {
+            background: white;
+            height: 300px;
+            margin-top: -20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Curve SVG Preview</h1>
+        <p>This shows how the curve looks between the red hero section and white market section:</p>
+        
+        <div class="preview">
+            <svg
+                class="curve"
+                viewBox="0 0 1440 120"
+                preserveAspectRatio="none"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M0,0 C200,80 400,80 600,60 C800,40 1000,40 1200,50 C1300,55 1400,60 1440,65 L1440,120 L0,120 Z"
+                    fill="white"
+                />
+            </svg>
+        </div>
+        
+        <div class="white-section"></div>
+        
+        <h2>SVG Code:</h2>
+        <pre><code>&lt;svg
+    viewBox="0 0 1440 120"
+    preserveAspectRatio="none"
+    fill="white"
+    xmlns="http://www.w3.org/2000/svg"
+&gt;
+    &lt;path
+        d="M0,0 C200,80 400,80 600,60 C800,40 1000,40 1200,50 C1300,55 1400,60 1440,65 L1440,120 L0,120 Z"
+        fill="white"
+    /&gt;
+&lt;/svg&gt;</code></pre>
+        
+        <h2>Online SVG Viewers:</h2>
+        <ul>
+            <li><a href="https://www.svgviewer.dev/" target="_blank">SVG Viewer</a></li>
+            <li><a href="https://boxy-svg.com/app" target="_blank">Boxy SVG</a></li>
+            <li><a href="https://jakearchibald.github.io/svgomg/" target="_blank">SVGOMG</a></li>
+        </ul>
+        
+        <p>You can copy the SVG code above and paste it into any of these online viewers to see and edit it.</p>
+    </div>
+</body>
+</html>
+
