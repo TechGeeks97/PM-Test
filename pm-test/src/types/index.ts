@@ -1,8 +1,3 @@
-/**
- * Global Type Definitions
- * All TypeScript interfaces and types used across the application
- */
-
 export interface MarketData {
   id: string;
   name: string;

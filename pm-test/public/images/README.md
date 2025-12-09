@@ -52,3 +52,4 @@ This folder should contain the following image files referenced in the codebase:
 
 **Note:** All images should be placed directly in this `public/images/` folder. The paths in the code reference them as `/images/filename.png`.
 
+

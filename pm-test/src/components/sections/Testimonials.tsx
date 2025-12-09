@@ -2,10 +2,9 @@
 
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
-import { TESTIMONIALS_DATA, TESTIMONIALS_CONFIG, TESTIMONIALS_CONTENT, IMAGES, colors } from '@/constants';
+import { TESTIMONIALS_DATA, TESTIMONIALS_CONFIG, TESTIMONIALS_CONTENT, IMAGES } from '@/constants';
 import type { Testimonial } from '@/types';
 
-// Fisher-Yates shuffle algorithm
 const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -23,7 +22,6 @@ export const Testimonials: React.FC = () => {
   
   const allTestimonials: Testimonial[] = TESTIMONIALS_DATA;
 
-  // Shuffle testimonials once on mount
   const testimonials = useMemo(() => shuffleArray(allTestimonials), []);
 
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
@@ -80,7 +78,6 @@ export const Testimonials: React.FC = () => {
 
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-24 pb-24 sm:pb-32 lg:pb-40 overflow-visible relative">
-      {/* Gradient Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src={IMAGES.gradientTestimonials}
@@ -92,12 +89,11 @@ export const Testimonials: React.FC = () => {
         />
       </div>
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        {/* Header */}
         <div className="mb-8 sm:mb-12 text-center">
           <div className="flex flex-col items-center gap-3 sm:gap-4 mb-4">
             <div className="w-full">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-gilroy-bold text-gray-900 mb-3 sm:mb-4" style={{ fontFamily: 'Gilroy-Bold, sans-serif' }}>
-                <span className="block">{heading.line1} <span className="text-[#ED1D25]">{heading.highlight}</span> {heading.line2}</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-gilroy-bold text-gray-900 mb-3 sm:mb-4">
+                <span className="block">{heading.line1} <span className="text-[var(--color-primary)]">{heading.highlight}</span> {heading.line2}</span>
                 <span className="block">{heading.line3}</span>
               </h2>
               <p className="text-sm sm:text-base font-normal max-w-3xl mx-auto px-4" style={{ color: '#A8A6B1' }}>
@@ -106,7 +102,6 @@ export const Testimonials: React.FC = () => {
               </p>
             </div>
             
-            {/* Navigation Arrows with Page Count */}
             <div className="flex items-center gap-3">
               <button
                 onClick={handlePrev}
@@ -123,7 +118,6 @@ export const Testimonials: React.FC = () => {
                 </svg>
               </button>
               
-              {/* Page Count */}
               <span className="text-sm font-medium text-gray-700 min-w-[60px] text-center">
                 {currentPage + 1} / {totalPages}
               </span>
@@ -146,7 +140,6 @@ export const Testimonials: React.FC = () => {
           </div>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="relative pb-12 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
             
@@ -160,7 +153,6 @@ export const Testimonials: React.FC = () => {
                 }}
               >
                 <div className="bg-white rounded-[11px] p-6 flex flex-col">
-                  {/* Review Text */}
                   <div className="mb-6">
                     <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
                       {expandedTestimonials[testimonial.id] || testimonial.review.length <= maxLength
@@ -170,14 +162,13 @@ export const Testimonials: React.FC = () => {
                     {testimonial.review.length > maxLength && (
                       <button
                         onClick={() => toggleExpand(testimonial.id)}
-                        className="text-[#ED1D25] text-sm font-medium mt-2 hover:underline"
+                        className="text-[var(--color-primary)] text-sm font-medium mt-2 hover:underline"
                       >
                         {expandedTestimonials[testimonial.id] ? 'Read less' : 'Read more'}
                       </button>
                     )}
                   </div>
 
-                  {/* Horizontal Divider */}
                   <div 
                     className="mb-4 h-[1px]"
                     style={{
@@ -185,20 +176,16 @@ export const Testimonials: React.FC = () => {
                     }}
                   />
 
-                  {/* User Info */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      {/* Initials Circle */}
                       <div className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
                         {testimonial.initials}
                       </div>
-                      {/* Name */}
                       <div className="font-semibold text-gray-900 text-sm sm:text-base">
                         {testimonial.name}
                       </div>
                     </div>
-                    {/* Icon */}
-                    <div className="text-[#ED1D25] flex-shrink-0">
+                    <div className="text-[var(--color-primary)] flex-shrink-0">
                       {getIcon(testimonial.icon)}
                     </div>
                   </div>
@@ -212,4 +199,3 @@ export const Testimonials: React.FC = () => {
     </section>
   );
 };
-

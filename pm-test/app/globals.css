@@ -1,17 +1,53 @@
 @import "tailwindcss";
 
-/* Gilroy Font */
+/* Gilroy Font Family - All Weights */
 @font-face {
-  font-family: 'Gilroy-Bold';
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
   src: url('/fonts/Gilroy-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Gilroy-Bold utility class */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gilroy utility classes */
+.font-gilroy {
+  font-family: 'Gilroy', sans-serif;
+}
+
 .font-gilroy-bold {
-  font-family: 'Gilroy-Bold', sans-serif !important;
+  font-family: 'Gilroy', sans-serif !important;
   font-weight: 700 !important;
   letter-spacing: -0.02em;
 }
@@ -20,30 +56,71 @@
   --background: #ffffff;
   --foreground: #171717;
   
-  /* Custom color variables from global color system */
-  /* Update these values to change the theme globally */
+  /* Primary Colors */
   --color-primary: #ED1D25;
   --color-primary-dark: #C91A1F;
   --color-primary-light: #F03A42;
+  --color-primary-gradient: linear-gradient(135deg, #ED1D25 0%, #991B1B 100%);
+  
+  /* Secondary Colors */
   --color-secondary: #1F2937;
   --color-secondary-dark: #111827;
   --color-secondary-light: #374151;
-  --color-background-dark: #000000;
+  
+  /* Background Colors */
+  --color-background-primary: #FFFFFF;
   --color-background-secondary: #F9FAFB;
+  --color-background-dark: #000000;
+  --color-background-dark-secondary: #0F0F0F;
+  --color-background-red: #ED1D25;
+  --color-background-red-gradient: linear-gradient(135deg, #ED1D25 0%, #991B1B 100%);
+  
+  /* Text Colors */
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #9CA3AF;
   --color-text-dark: #111827;
+  --color-text-light: #F3F4F6;
+  
+  /* Accent Colors */
+  --color-accent-red: #ED1D25;
   --color-accent-green: #10B981;
-  --color-accent-red: #EF4444;
+  --color-accent-red-negative: #EF4444;
+  --color-accent-blue: #3B82F6;
+  
+  /* Border Colors */
   --color-border-light: #E5E7EB;
   --color-border-dark: #374151;
+  --color-border-red: #ED1D25;
+  --color-border-gray: #C9C9C9;
+  
+  /* Status Colors */
+  --color-status-success: #10B981;
+  --color-status-error: #EF4444;
+  --color-status-warning: #F59E0B;
+  --color-status-info: #3B82F6;
+  
+  /* Additional Colors */
+  --color-text-black: #010205;
+  --color-red-dark: #991B1B;
+  --color-red-darker: #7F1D1D;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-primary), 'Urbanist', Arial, Helvetica, sans-serif;
-  --font-mono: var(--font-primary), 'Urbanist', 'Courier New', monospace;
+  --font-sans: 'Gilroy', Arial, Helvetica, sans-serif;
+  --font-mono: 'Gilroy', 'Courier New', monospace;
+  
+  /* Color utilities for Tailwind */
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-secondary: var(--color-secondary);
+  --color-text-dark: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-accent-red: var(--color-accent-red);
+  --color-accent-green: var(--color-accent-green);
+  --color-border-light: var(--color-border-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,7 +133,7 @@
 body {
   background: #ffffff;
   color: var(--foreground);
-  font-family: var(--font-primary), 'Urbanist', Arial, Helvetica, sans-serif;
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -67,9 +144,9 @@ body {
   font-family: inherit;
 }
 
-/* Apply Urbanist to all text elements explicitly */
+/* Apply Gilroy to all text elements explicitly */
 h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select, label, li, td, th {
-  font-family: var(--font-primary), 'Urbanist', Arial, Helvetica, sans-serif;
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
 }
 
 /* Smooth scrolling - with fallback for older browsers */

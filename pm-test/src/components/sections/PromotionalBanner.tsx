@@ -19,9 +19,9 @@ export const PromotionalBanner: React.FC = () => {
           }}
         >
           <div className="flex flex-col lg:flex-row gap-1 sm:gap-1.5 lg:gap-2 items-center px-2 sm:px-3 lg:px-4 py-3 sm:py-4 lg:py-5 relative overflow-visible">
-            {/* Left Section - Content */}
+            
             <div className="space-y-1.5 sm:space-y-2 text-white flex-1 text-left w-full lg:max-w-lg z-10">
-              {/* Three-Step Process */}
+              
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 md:gap-4">
                 {steps.map((step) => (
                   <div key={step.label} className="flex items-center gap-2 sm:gap-2.5">
@@ -40,13 +40,13 @@ export const PromotionalBanner: React.FC = () => {
                 ))}
               </div>
 
-              {/* Descriptive Text */}
+              
               <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-lg mx-auto lg:mx-0 font-normal">
                 <span className="block">{description.line1}</span>
                 <span className="block">{description.line2}</span>
               </p>
 
-              {/* Call to Action Button */}
+              
               <div className="flex justify-center lg:justify-start">
                 <Button variant="secondary" size="lg" className="w-full sm:w-auto text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4">
                   {button}
@@ -54,7 +54,7 @@ export const PromotionalBanner: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Section - Phone in Hand Image - Extreme Right Edge */}
+            
             <div className="relative flex justify-center lg:justify-end shrink-0 order-first lg:order-last lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:items-end">
               <div className="relative w-[140px] h-[180px] sm:w-[180px] sm:h-[240px] md:w-72 md:h-[280px] lg:w-[180px] lg:h-[240px] xl:w-[450px] xl:h-[400px] flex items-center lg:translate-y-8 xl:translate-y-12">
                 <Image
@@ -73,4 +73,3 @@ export const PromotionalBanner: React.FC = () => {
     </section>
   );
 };
-

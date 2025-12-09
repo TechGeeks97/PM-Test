@@ -1,20 +1,9 @@
-/**
- * Centralized Constants File
- * All static data, configurations, and constants for the homepage
- */
-
-// Image Paths
 export const IMAGES = {
-  // Logo & Branding
   logo: '/images/Logo.png',
   logoWhite: '/images/Logowhitered.png',
   flag: '/images/Flag.png',
-  
-  // Hero Section
   mobileDuoHero: '/images/mobileduohero.png',
   curve: '/images/curve.png',
-  
-  // Access Markets
   backgroundGroup890: '/images/Group 890.png',
   coin: '/images/Coin.png',
   vector: '/images/Vector.png',
@@ -24,48 +13,32 @@ export const IMAGES = {
   secureImage: '/images/secureimage.png',
   send: '/images/send.svg',
   sendRed: '/images/sendred.svg',
-  
-  // Join Traders
   handyman: '/images/handyman.png',
   dollarsBackground: '/images/dollars-background.png',
-  
-  // Our Markets
   cryptocurrency: '/images/Cryptocurrency.png',
   gold: '/images/gold.png',
   usEuro: '/images/us-euro.png',
   arrow1: '/images/Arrow 1.png',
   arrowUpRed: '/images/Arrowupred.png',
   arrowSquareIn: '/images/ArrowSquareIn.png',
-  
-  // Empower Trading
   empoweringTrading: '/images/empowering trading.png',
   chartingTool: '/images/chartingtool.png',
   tradingFirstCardFade: '/images/tradingfirstcardfade.png',
   flexibleLeverage: '/images/flexibleleverage.png',
   roundClock: '/images/roundclock.png',
   priceAlert: '/images/pricealert.png',
-  
-  // Seamless Withdrawals
   mobileHand1: '/images/mobile hand 1.png',
   userCard: '/images/usercard.png',
   mastercardFull: '/images/mastercard-full.png',
   fastImage: '/images/fastimage.png',
   effortless: '/images/effortless.png',
-  
-  // Daily Updates
   dailyUpdatesCover: '/images/dailyupdatescover.png',
   mediaBgCover: '/images/media bg-cover.png',
-  
-  // Testimonials
   gradientTestimonials: '/images/gradient for testimonials.png',
-  
-  // Promotional Banner
   step1: '/images/1.png',
   step2: '/images/2.png',
   step3: '/images/3.png',
   mobileHand: '/images/mobilehand.png',
-  
-  // Footer
   facebook: '/images/facebook.svg',
   linkedin: '/images/linkedinsvg.svg',
   instagram: '/images/instasvg.svg',
@@ -76,12 +49,9 @@ export const IMAGES = {
   skrillWhite: '/images/Skrillwhite.png',
   applePayWhite: '/images/Paywhite.png',
   visa: '/images/Visa.png',
-  
-  // User
   user: '/images/User.png',
 } as const;
 
-// Navigation Items
 export const NAVIGATION_ITEMS = [
   {
     label: 'Trading',
@@ -132,7 +102,6 @@ export const NAVIGATION_ITEMS = [
   },
 ] as const;
 
-// Footer Links
 export const FOOTER_LINKS = {
   quickLinks: [
     { label: 'About Us', href: '#' },
@@ -163,7 +132,6 @@ export const SOCIAL_ICONS = [
   { name: 'X (Twitter)', image: IMAGES.x, href: '#' },
 ] as const;
 
-// Payment Methods
 export const PAYMENT_METHODS = [
   { name: 'PayPal', image: IMAGES.paypalWhite },
   { name: 'Mastercard', image: IMAGES.mastercardWhite },
@@ -172,7 +140,6 @@ export const PAYMENT_METHODS = [
   { name: 'Visa', image: IMAGES.visa },
 ] as const;
 
-// Access Markets Feature Buttons
 export const ACCESS_MARKETS_FEATURES = [
   {
     icon: IMAGES.coin,
@@ -188,7 +155,6 @@ export const ACCESS_MARKETS_FEATURES = [
   },
 ] as const;
 
-// Market Cards
 export const MARKET_CARDS = [
   {
     icon: IMAGES.coin,
@@ -212,7 +178,6 @@ export const MARKET_CARDS = [
   },
 ] as const;
 
-// Empower Trading Features
 export const EMPOWER_TRADING_FEATURES = [
   {
     id: 'charting',
@@ -241,7 +206,6 @@ export const EMPOWER_TRADING_FEATURES = [
   },
 ] as const;
 
-// Seamless Withdrawals Features
 export const WITHDRAWAL_FEATURES = [
   {
     id: 'fast',
@@ -263,14 +227,12 @@ export const WITHDRAWAL_FEATURES = [
   },
 ] as const;
 
-// Promotional Banner Steps
 export const PROMOTIONAL_STEPS = [
   { image: IMAGES.step1, label: 'Register' },
   { image: IMAGES.step2, label: 'Fund' },
   { image: IMAGES.step3, label: 'Start Trading' },
 ] as const;
 
-// Testimonials Data
 export const TESTIMONIALS_DATA = [
   {
     id: '1',
@@ -337,13 +299,11 @@ export const TESTIMONIALS_DATA = [
   },
 ] as const;
 
-// Testimonials Configuration
 export const TESTIMONIALS_CONFIG = {
   itemsPerPage: 9,
   maxLength: 150,
 } as const;
 
-// Hero Section Content
 export const HERO_CONTENT = {
   title: {
     line1: 'Trade Forex',
@@ -357,7 +317,6 @@ export const HERO_CONTENT = {
   },
 } as const;
 
-// Access Markets Content
 export const ACCESS_MARKETS_CONTENT = {
   heading: {
     line1: 'Trade',
@@ -369,7 +328,6 @@ export const ACCESS_MARKETS_CONTENT = {
   description: 'Trade forex, shares, indices, and commodities with competitive spreads, deep liquidity, and seamless execution.',
 } as const;
 
-// Join Traders Content
 export const JOIN_TRADERS_CONTENT = {
   heading: {
     line1: 'Join',
@@ -393,7 +351,6 @@ export const JOIN_TRADERS_CONTENT = {
   },
 } as const;
 
-// Empower Trading Content
 export const EMPOWER_TRADING_CONTENT = {
   heading: 'Empower Your Trading',
   description: {
@@ -402,13 +359,11 @@ export const EMPOWER_TRADING_CONTENT = {
   },
 } as const;
 
-// Seamless Withdrawals Content
 export const WITHDRAWAL_CONTENT = {
   subtitle: 'Access your funds anytime, anywhere.',
   heading: 'Seamless Withdrawals',
 } as const;
 
-// Daily Updates Content
 export const DAILY_UPDATES_CONTENT = {
   label: 'Daily Updates',
   heading: 'Everything you need to trade the markets',
@@ -430,7 +385,6 @@ export const DAILY_UPDATES_CONTENT = {
   },
 } as const;
 
-// Testimonials Content
 export const TESTIMONIALS_CONTENT = {
   heading: {
     line1: 'What',
@@ -444,7 +398,6 @@ export const TESTIMONIALS_CONTENT = {
   },
 } as const;
 
-// Promotional Banner Content
 export const PROMOTIONAL_BANNER_CONTENT = {
   description: {
     line1: 'Ready to trade smarter? Get instant access to global',
@@ -453,14 +406,12 @@ export const PROMOTIONAL_BANNER_CONTENT = {
   button: 'Get Started',
 } as const;
 
-// Footer Content
 export const FOOTER_CONTENT = {
   disclaimer: 'CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 21.38% of retail investor accounts generate profits when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.',
   companyInfo: 'Premier Markets Ltd, trading as Premier Markets is a company incorporated under company number: A000003075 in Anguilla. Our registered office is located at Anguilla, The Valley, Kismet House, Sandy Hill, PO Box P.O.Box 174 The information on this site is not directed at residents of Russia, Afghanistan, Belgium, Canada, India, United States or any country or jurisdiction where such distribution or use would be contrary to local law, sanctions or regulation.',
   copyright: 'Copyright © 2025 Premier Markets - All Rights Reserved.',
 } as const;
 
-// Our Markets Data
 export const MARKET_CATEGORIES = [
   { id: 'most-traded', label: 'Most Traded' },
   { id: 'commodities', label: 'Commodities' },
@@ -472,8 +423,6 @@ export const MARKET_CATEGORIES = [
 
 export const TIMEFRAMES = ['1d', '1h', '4h', '1m', '5m', '15m', '30m', '1w'] as const;
 
-// Market Assets Data (moved from OurMarkets component)
-// Note: This is dummy data for demonstration. In production, this would come from an API.
 export const MARKET_ASSETS = [
   {
     id: 'btc',
@@ -655,7 +604,6 @@ export const getChartData = (assetId: string, timeframe: string) => {
     },
   };
 
-  // Default data if asset not found
   const defaultData = Array.from({ length: 12 }, (_, i) => ({
     month: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i],
     value: 20 + Math.random() * 80,
@@ -664,5 +612,4 @@ export const getChartData = (assetId: string, timeframe: string) => {
   return baseData[assetId]?.[timeframe] || defaultData;
 };
 
-export { colors } from './colors';
 

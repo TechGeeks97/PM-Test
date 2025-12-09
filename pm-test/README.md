@@ -15,6 +15,7 @@ A modern, responsive trading platform website built with Next.js 16, React 19, T
 ```bash
 git clone git@github.com:TechGeeks97/PM-Test.git
 cd PM-Test/pm-test
+run git checkout main
 ```
 
 2. Install dependencies:

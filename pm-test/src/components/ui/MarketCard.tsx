@@ -53,4 +53,3 @@ export const MarketCard: React.FC<MarketCardProps> = ({ market }) => {
     </Card>
   );
 };
-

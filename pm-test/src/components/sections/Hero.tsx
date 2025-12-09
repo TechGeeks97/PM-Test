@@ -3,21 +3,18 @@
 import React from 'react';
 import { Button } from '../ui/Button';
 import Image from 'next/image';
-import { HERO_CONTENT, IMAGES, colors } from '@/constants';
+import { HERO_CONTENT, IMAGES } from '@/constants';
 
 export const Hero: React.FC = () => {
   const { title, description, buttons } = HERO_CONTENT;
 
   return (
     <section 
-      className="text-white relative"
-      style={{
-        backgroundColor: colors.primary.main
-      }}
+      className="text-[var(--color-text-primary)] bg-[var(--color-primary)] relative"
     >
       <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-12 lg:pb-0">
-          {/* Left Content */}
+          
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-gilroy-bold">
               <span className="block">{title.line1}</span>
@@ -49,7 +46,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Content - Phone Mockup - Mobile/Tablet only */}
+          
           <div className="flex flex-col justify-center lg:hidden items-center relative z-10 mt-8">
             <div className="relative w-full max-w-xs sm:max-w-md h-[300px] sm:h-[400px] md:h-[500px]" style={{ marginTop: '20px', zIndex: 10 }}>
               <Image
@@ -64,7 +61,7 @@ export const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* Desktop Phone Mockup - Absolutely positioned to touch curve */}
+      
       <div className="hidden lg:block absolute right-4 xl:right-8 2xl:right-[calc((100vw-1280px)/2+1.5rem)] bottom-0 z-10">
         <div className="relative w-[400px] xl:w-[500px] h-[600px] xl:h-[700px]">
           <Image
@@ -77,7 +74,7 @@ export const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* Curve Image - Full width, positioned at bottom of section */}
+      
       <div className="relative w-full z-20" style={{ marginTop: '-1px' }}>
         <Image
           src={IMAGES.curve}
@@ -90,4 +87,3 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
-
